@@ -1,7 +1,5 @@
 pipeline {
     agent any
-    sh 'echo "Prinitng pull ID"'
-    sh 'echo ${env.CHANGE_ID}'
 
     stages {
         stage ('Compile Feature Stage') {
@@ -18,13 +16,14 @@ pipeline {
             steps {
                 withMaven(maven : 'maven_3_5_0') {
                     sh 'mvn test'
+                    sh "echo ${env.CHANGE_ID}"
                 }
             }
         }
 
          stage ('Run Sonar Analysis Stage on Feature') {
             steps {
-                // def PULL_REQUEST = env.CHANGE_ID
+                //def PULL_REQUEST = ${env.CHANGE_ID}
                 withMaven(maven : 'maven_3_5_0') {
                     sh 'echo "Printing pullID"'
                     sh """mvn sonar:sonar \
