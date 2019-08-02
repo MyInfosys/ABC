@@ -23,7 +23,6 @@ pipeline {
 
          stage ('Run Sonar Analysis Stage on Feature') {
             steps {
-                //def PULL_REQUEST = ${env.CHANGE_ID}
                 withMaven(maven : 'maven_3_5_0') {
                     // sh 'echo "Printing pullID"'
                     // sh "PULL_REQUEST= ${env.CHANGE_ID}"
