@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    sh 'echo "Prinitng pull ID"'
+    sh 'echo ${env.CHANGE_ID}'
 
     stages {
         stage ('Compile Feature Stage') {
@@ -25,7 +27,6 @@ pipeline {
                 // def PULL_REQUEST = env.CHANGE_ID
                 withMaven(maven : 'maven_3_5_0') {
                     sh 'echo "Printing pullID"'
-                    sh 'echo ${env.CHANGE_ID}'
                     sh """mvn sonar:sonar \
                          -Dsonar.projectKey=abc_sonar \
                          -Dsonar.host.url=http://34.68.137.4:9000 \
