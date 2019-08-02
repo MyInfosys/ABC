@@ -24,9 +24,6 @@ pipeline {
          stage ('Run Sonar Analysis Stage on Feature') {
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    // sh 'echo "Printing pullID"'
-                    // sh "PULL_REQUEST= ${env.CHANGE_ID}"
-                    // sh 'echo $PULL_REQUEST'
                     sh """mvn sonar:sonar \
                          -Dsonar.projectKey=abc_sonar \
                          -Dsonar.host.url=http://34.68.137.4:9000 \
