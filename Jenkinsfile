@@ -21,8 +21,8 @@ pipeline {
         }
 
          stage ('Run Sonar Analysis Stage on Feature') {
-            def PULL_REQUEST = env.CHANGE_ID
             steps {
+                def PULL_REQUEST = env.CHANGE_ID
                 withMaven(maven : 'maven_3_5_0') {
                     sh """mvn sonar:sonar \
                          -Dsonar.projectKey=abc_sonar \
