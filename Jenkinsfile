@@ -24,6 +24,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
+                    sh 'echo ${ghprbPullId}'
                     sh """mvn sonar:sonar \
                          -Dsonar.projectKey=abc_sonar \
                          -Dsonar.host.url=http://34.68.137.4:9000 \
