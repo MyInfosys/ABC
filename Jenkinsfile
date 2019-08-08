@@ -52,7 +52,7 @@ pipeline {
     post {
         always {
             script {
-                 email.notify('${status}')
+                 email.notify(${status})
             }
         }
     }
