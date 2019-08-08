@@ -49,11 +49,4 @@ pipeline {
             }
         }                
     }
-    post {
-        always {
-            script {
-                 email.notify(${status})
-            }
-        }
-    }
 }
