@@ -4,49 +4,8 @@
 //log.info 'Starting'
 //log.warning 'Nothing to do!'
 
-pipeline {
-    agent any
-    
-    stages {
-        stage('Git Checkout') {
-            steps {
-            gitCheckout(
-                branch: "Feature",
-                url: "https://github.com/MyInfosys/ABC.git"
-                )
-            }
-        }
-        
-        stage ('Clean Compile Test Package Feature Stages') {
-
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    script {
-                         maven.mavenGoals()
-                    }
-                }
-            }
-        }     
-         stage ('Run Sonar Analysis Stage on Feature') {
-
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    script {
-                         sonar.sonarScan()
-                    }
-                }
-            }
-        }               
-                
-         stage ('Deploy To Nexus Feature Stage') {
-
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    script {
-                         nexus.nexusDeploy()
-                    }
-                }
-            }
-        }                
-    }
-}
+myDeliveryPipeline(branch: 'Feature', scmUrl: 'https://github.com/MyInfosys/ABC.git',
+                   email: 'adsurenikhil89@gmail.com',
+                   projectKey: 'abc_sonar',
+                   hostUrl: 'http://35.239.219.161:9000',
+                   sonarLogin: '7aa0f5eec8f0ef469314e6b95f4c18ce822b0891')
