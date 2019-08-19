@@ -4,4 +4,4 @@
 //log.info 'Starting'
 //log.warning 'Nothing to do!'
 
-myDeliveryPipeline()
+myDeliveryPipeline(branch: 'master', scmUrl: 'https://github.com/MyInfosys/Audi.git')
