@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.abcfeature.testing</groupId>
+    <groupId>com.audi.master</groupId>
     <artifactId>jenkins-example</artifactId>
     <version>1.0</version>
 
@@ -58,7 +58,7 @@
     <distributionManagement>
         <repository>
             <id>nexus</id>
-            <url>http://34.93.8.172:8081/repository/infosys-abc-feature-release/</url>
+            <url>http://34.93.8.172:8081/repository/infosys-audi-release/</url>
         </repository>
     </distributionManagement>
          
