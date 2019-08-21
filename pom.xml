@@ -59,12 +59,7 @@
         <snapshotRepository>
             <id>nexus</id>
             <url>http://34.93.8.172:8081/repository/infosys-audi-snapshot/</url>
-        </snapshotRepository>
-             
-        <repository>
-            <id>nexus</id>
-            <url>http://34.93.8.172:8081/repository/infosys-audi-release/</url>
-        </repository>           
+        </snapshotRepository>          
     </distributionManagement>
          
 </project>
