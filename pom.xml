@@ -56,10 +56,10 @@
     </dependencies>
 
     <distributionManagement>
-        <snapshotrepository>
+        <snapshotRepository>
             <id>nexus</id>
             <url>http://34.93.8.172:8081/repository/infosys-audi-snapshot/</url>
-        </snapshotrepository>
+        </snapshotRepository>
              
         <repository>
             <id>nexus</id>
