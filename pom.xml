@@ -58,8 +58,8 @@
     <distributionManagement>
         <repository>
             <id>nexus</id>
-            <url>http://34.93.8.172:8081/repository/infosys-audi-release/</url>
+            <url>http://34.93.136.77:8081/repository/infosys-audi-release/</url>
         </repository>
     </distributionManagement>
-       
+        
 </project>
