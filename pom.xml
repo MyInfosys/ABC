@@ -6,7 +6,7 @@
 
     <groupId>com.infosys.audi</groupId>
     <artifactId>audiR8</artifactId>
-    <version>1.1-${BUILD_NUMBER}</version>
+    <version>v1.0-${BUILD_NUMBER}-SNAPSHOT</version>
 
 
     <properties>
@@ -58,7 +58,7 @@
     <distributionManagement>
         <repository>
             <id>nexus</id>
-            <url>http://34.93.136.77:8081/repository/infosys-audi-release/</url>
+            <url>http://34.93.136.77:8081/repository/infosys-audi-snapshot/</url>
         </repository>
     </distributionManagement>
  
